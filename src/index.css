@@ -43,11 +43,19 @@ body{
   justify-content: space-between;
   flex-wrap: wrap;
   background-color: black;
-  padding: 2rem;
+  padding:  2rem;
+  overflow: hidden;
 }
 
-.header>img{
+.header>.img1{
+  padding: 1rem;
+  padding-left: 2rem;
   width: 10rem;
+}
+
+.header>.img2{
+  padding: 1rem;
+  width: 14rem;
 }
 
 
@@ -57,6 +65,8 @@ body{
   width: 100%;
   max-height: 100vh;
   overflow: hidden;
+  margin-bottom: -5px;
+  pointer-events:none;    
 }
 .banner-image {
   width: 100%;
@@ -69,24 +79,42 @@ body{
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  pointer-events:auto;
+
 }
 .main-heading {
-  font-size:1rem;
+  position: relative;
+  
   font-family: 'Intro-Light';
-  margin: 0;
   color:black;
-  margin-top:1rem;
   padding:1rem;
   display: flex;
   flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
+
 }
+
+
+.main-heading>a{
+  position: relative;
+  text-decoration: none;
+  color: black;
+  margin-left: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+  font-size:2vh;
+}
+
+
 .sub-heading {
   font-size: 24px;
   margin-top: 10px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
+
+
+
 .right-heading-container {
   position: absolute;
   top: 50%;
@@ -101,13 +129,24 @@ body{
   width: 40rem;
 }
 
-@media (max-width: 768px) {
+
+
+@media (max-width: 1000px) {
   .right-heading-container>img{
-    width: 15rem;
+    width: 30rem;
     margin-top: 2rem;
   }
 }
-
+@media (max-width: 400px) {
+  .right-heading-container>img{
+    width: 22rem;
+    margin-top: 2rem;
+  }
+  .main-heading>a{
+    font-size: 1.2vh;
+  }
+  
+}
 .right-heading {
   font-size: 24px;
   font-weight: bold;
@@ -128,6 +167,7 @@ body{
 
 .intro-heading{
   font-size: 1.2rem;
+  line-height: 1.5rem;
   font-family: 'Intro-Bold';
 }
 
@@ -148,7 +188,6 @@ body{
 }
 .image-logo-grid>img{
   width: 150px;
-  background-color: #ccc;
 }
 
 /*********image-desc-grid***********/
@@ -157,10 +196,7 @@ body{
   grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
   padding: 2rem;
   text-align: justify;
-  background-color: #fff;
-
-
-  
+  background-color: #fff;  
 }
 
 /* Style for the image */
@@ -195,14 +231,17 @@ body{
 }
 
 .flex_img1{
-  width: 300px;
-  height: 100px;
+  width: 250px;
+  height: 130px;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
 }
 
 .flex_img2{
   width: 400px;
-  height: 250px;
+  height: 200px;
   margin: auto 0;
+  padding: 1rem;
 }
 
 
